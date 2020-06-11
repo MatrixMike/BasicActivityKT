@@ -1,0 +1,2 @@
+rootProject.name='BasicAct1'
+include ':app'
