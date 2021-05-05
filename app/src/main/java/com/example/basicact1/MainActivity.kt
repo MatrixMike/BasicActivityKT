@@ -16,8 +16,12 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, getString(R.string.snackString) + " x " + count++, Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            Snackbar.make(
+                view,
+                (this.getString(R.string.snackString) + " please ") + " x " + count++,
+                Snackbar.LENGTH_LONG
+            )
+                .setAction("Action", null).show()
         }
     }
 
