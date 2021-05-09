@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    var count = 998
+    private var count = 998
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(
                 view,
                 String.format(
-                    Locale.getDefault(),
+                    Locale.ENGLISH,
                     (this.getString(R.string.snackString) + " please ") + " x " + count++
                 ),
                 // https://stackoverflow.com/questions/23086291/format-in-kotlin-string-templates
