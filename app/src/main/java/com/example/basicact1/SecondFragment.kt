@@ -16,14 +16,15 @@ import androidx.navigation.fragment.navArgs
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
 class SecondFragment : Fragment() {
-
+    var iTAG: String = "MikeH"
     private val args: SecondFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.w("ZZZZ:", "onCreateView 2nd ")
+        Log.i(iTAG, "onCreateView 2nd ")
+        count=count+5
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second, container, false)
     }

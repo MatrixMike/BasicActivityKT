@@ -13,11 +13,13 @@ import androidx.navigation.fragment.findNavController
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class FirstFragment : Fragment() {
+    var iTAG: String = "MikeH"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.w("ZZZZ:", "onCreateView 1st ")
+        Log.i(iTAG, "onCreateView 1st ")
+        count=count+3
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
@@ -30,5 +32,6 @@ class FirstFragment : Fragment() {
                 FirstFragmentDirections.actionFirstFragmentToSecondFragment("From FirstFragment")
             findNavController().navigate(action)
         }
+        Log.i(iTAG,"onViewCreated 1st")
     }
 }

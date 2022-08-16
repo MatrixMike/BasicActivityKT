@@ -9,9 +9,9 @@ import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-
+var count = 998
 class MainActivity : AppCompatActivity() {
-    private var count = 998
+ //   private var count = 998
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        var TAG: String = "MikeH"
+        val TAG: String = "MikeH"  // explicit type is redundant here but left for my clarity
         Log.i(TAG, "onOptionsItemSelected")
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
