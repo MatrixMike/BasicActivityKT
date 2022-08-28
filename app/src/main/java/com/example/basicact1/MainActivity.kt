@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 view,
                 String.format(
                     Locale.ENGLISH,
-                    (this.getString(R.string.snackString) + " please ") + "  " + count++
+                    (this.getString(R.string.snackString) + " please ") // + "  " + count++
                 ),
                 // https://stackoverflow.com/questions/23086291/format-in-kotlin-string-templates
                 Snackbar.LENGTH_LONG
